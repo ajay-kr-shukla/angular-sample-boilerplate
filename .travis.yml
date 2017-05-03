@@ -1,0 +1,17 @@
+language: node_js
+
+before_install:
+  - export PHANTOMJS_BIN=/usr/local/phantomjs/bin/phantomjs
+  - gem install sass
+  - gem install compass
+
+node_js:
+  - "4.1"
+
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install --quiet -g grunt-cli karma
+  - npm install
+
+script: grunt
