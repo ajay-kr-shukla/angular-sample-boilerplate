@@ -11,7 +11,10 @@
 	'services.math',
 	'factory.math',
 	'application.filters',
-	'application.components'
+	'application.components',
+	'factory.interceptor',
+	'factory.APIWrapper',
+	'constants.APIMessages'
     ])
     .run(run);
 

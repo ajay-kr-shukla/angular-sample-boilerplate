@@ -17,5 +17,7 @@
     });
 
     $translateProvider.use('en_EN');
+
+	$httpProvider.interceptors.push('TimestampMarker');
   }
 })();
