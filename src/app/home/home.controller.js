@@ -21,7 +21,6 @@
 	console.log('APIWrapper ', APIWrapper);
 	console.log('Math Factory', MathFactory);
 	home.getInteceptorRequest();
-	home.getAPIRequest();
     };
 
     home.toggleLang = function() {
