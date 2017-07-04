@@ -6,6 +6,7 @@
         'templates-app',
         'templates-common',
         'application.home',
+	'application.crud',
         'ui.router',
         'pascalprecht.translate',
 	'services.math',

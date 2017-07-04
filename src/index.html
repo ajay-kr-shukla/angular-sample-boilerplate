@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="application" ng-controller="ApplicationController as app">
-  <head>
+
+<head>
     <title ng-bind="app.pageTitle"></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,26 +9,32 @@
     <!-- font awesome from BootstrapCDN -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <!-- compiled CSS -->
+    <% styles.forEach( function ( file ) { %>
+        <link rel="stylesheet" type="text/css" href="<%= file %>" />
+        <% }); %>
 
-    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+            <!-- compiled JavaScript -->
+            <% scripts.forEach( function ( file ) { %>
+                <script type="text/javascript" src="<%= file %>"></script>
+                <% }); %>
 
-  </head>
-  <body>
-	
-	 <header >
-        	<header-component></header-component>
-	 </header>
+</head>
 
-	<div class="container" >    
-		<main ui-view="main" >
-	 	</main>
-	</div>
-	    
-	<footer ng-show="hideHeader">
-		<footer-component class="hide-xs hide-gt-xs show-sm show-gt-sm "></footer-component>
-	</footer>
-  </body>
+<body>
+
+    <header>
+        <header-component></header-component>
+    </header>
+
+    <div class="container">
+        <main ui-view="main">
+        </main>
+    </div>
+
+    <footer>
+        <footer-component class="hide-xs hide-gt-xs show-sm show-gt-sm "></footer-component>
+    </footer>
+</body>
+
 </html>
