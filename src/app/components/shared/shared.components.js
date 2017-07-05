@@ -1,3 +1,11 @@
+/**
+* Here we are defining components  Ex. headerComponent and footerComponent
+* This Components can be used across app ex Header,Footer
+* params : template: path of HTML file
+* Controller: Controller to be invoked for component
+* controllerAs : Aliasing of controller
+*/
+
 (function () {
     'use strict';
 

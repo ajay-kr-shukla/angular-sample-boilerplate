@@ -1,3 +1,8 @@
+/**
+* Interceptor Factory  file 
+* We can capture every request object and response object timestamp from here
+*/
+
 angular.module('factory.interceptor', []).factory('TimestampMarker',  TimestampMarker);
 
 TimestampMarker.$inject = [];

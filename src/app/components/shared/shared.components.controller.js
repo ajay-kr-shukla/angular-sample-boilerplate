@@ -1,3 +1,8 @@
+/**
+* Here we are defining components Controller Ex. Header,Footer
+* This Components can be used across app Ex. Header,Footer
+*/
+
 (function () {
     'use strict';
 

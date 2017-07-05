@@ -1,3 +1,8 @@
+/**
+* Math Factory file 
+* Here we are creating a user defined based on defined functions add, subtract, multiply, devide etc
+* Returning factory object
+*/
 angular.module('factory.math', []).factory('MathFactory',  MathFactory);
 
 MathFactory.$inject = [];

@@ -1,3 +1,9 @@
+/**
+* ApplicationController Testing file 
+* It can be used for writing unit test cases wrt to module controller and services.
+*/
+
+
 describe( 'ApplicationController', function() {
   describe( 'isCurrentUrl', function() {
     var ApplicationController, $location, $scope, $translate;

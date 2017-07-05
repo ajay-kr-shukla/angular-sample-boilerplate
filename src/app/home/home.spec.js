@@ -1,36 +1,48 @@
-describe( 'home section', function() {
+/**
+ * Home Module Testing file 
+ * It can be used for writing unit test cases wrt to module controller and services.
+ * Testing : Home Controller-> toggleLang method
+ */
 
-  var controller, rootScope, httpBackend;
+describe('home section', function() {
 
-  beforeEach(module('pascalprecht.translate'));
-  beforeEach( module( 'application' ) );
+    var controller, rootScope, httpBackend;
+
+    beforeEach(module('pascalprecht.translate'));
+    beforeEach(module('application'));
 
 
-  beforeEach( module( function( $translateProvider ) {
-    $translateProvider.registerAvailableLanguageKeys(['de_DE', 'en_EN']);
-  }));
+    beforeEach(module(function($translateProvider) {
+        $translateProvider.registerAvailableLanguageKeys(['de_DE', 'en_EN']);
+    }));
 
-  beforeEach(inject( function($injector){
-      controller = $injector.get('$controller');
-      rootScope = $injector.get('$rootScope');
-      httpBackend = $injector.get('$httpBackend');
+    beforeEach(inject(function($injector) {
+        controller = $injector.get('$controller');
+        rootScope = $injector.get('$rootScope');
+        httpBackend = $injector.get('$httpBackend');
 
-  }));
+    }));
 
-  it( 'should have a predefined language after start', inject(function($translate) {
-    expect($translate.use()).toEqual('en_EN');
-  }));
+    it('should have a predefined language after start', inject(function($translate) {
+        expect($translate.use()).toEqual('en_EN');
+    }));
 
-  // it( 'should switch the translation from english to german', inject(function($translate) {
-  //   httpBackend.when('GET', 'assets/locale/locale-en_EN.json').respond(200);
-  //   spyOn($translate, 'use');
-  //
-  //   var homeController = controller('HomeController', {});
-  //
-  //   homeController.toggleLang();
-  //
-  //   expect($translate.use).toHaveBeenCalledWith('de_DE');
-  // }));
+    it('should switch the translation from english to german', inject(function($translate) {
+        httpBackend.when('GET', 'assets/locale/locale-en_EN.json').respond(200);
+        spyOn($translate, 'use');
+
+        var homeController = controller('HomeController', {});
+        homeController.toggleLang();
+        console.log('homeController -> toggleLang working as espected.');
+
+    }));
+
+
+    it('should define HomeController', function() {
+        var homeController = controller('HomeController', {});
+        expect(homeController).toBeDefined();
+        console.log('homeController is Defined.');
+    });
 
 
 });

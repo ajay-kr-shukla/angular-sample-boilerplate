@@ -1,4 +1,9 @@
-describe( 'home section', function() {
+/**
+* Crud Module Testing file 
+* It can be used for writing unit test cases wrt to module controller and services.
+*/
+
+describe( 'crud section', function() {
 
   var controller, rootScope, httpBackend;
 
@@ -21,16 +26,11 @@ describe( 'home section', function() {
     expect($translate.use()).toEqual('en_EN');
   }));
 
-  // it( 'should switch the translation from english to german', inject(function($translate) {
-  //   httpBackend.when('GET', 'assets/locale/locale-en_EN.json').respond(200);
-  //   spyOn($translate, 'use');
-  //
-  //   var homeController = controller('HomeController', {});
-  //
-  //   homeController.toggleLang();
-  //
-  //   expect($translate.use).toHaveBeenCalledWith('de_DE');
-  // }));
+  it('should define CrudController', function() {
+        var crudController = controller('CrudController', {});
+        expect(crudController).toBeDefined();
+        console.log('CrudController is Defined.');
+    });
 
 
 });

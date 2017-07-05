@@ -1,3 +1,7 @@
+/**
+* App Config file 
+* App level config is defined. ex. Routing
+*/
 (function() {
   'use strict';
 

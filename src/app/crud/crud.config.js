@@ -1,3 +1,8 @@
+/**
+* Crud Module Config file 
+* Here we are defining Routing, Controller, aliases and HTML template file
+*/
+
 (function() {
     'use strict';
 

@@ -1,3 +1,8 @@
+/**
+* APIMessages Module Controller file 
+* Here we are defining message code, generic message strings for App
+*/
+
 (function () {
     'use strict';
 

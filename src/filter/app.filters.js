@@ -1,3 +1,7 @@
+/**
+* AngularJS Filters file 
+* Here we are defining user custom defined filters for specific needs Ex. timeAgo
+*/
 (function () {
     'use strict';
 

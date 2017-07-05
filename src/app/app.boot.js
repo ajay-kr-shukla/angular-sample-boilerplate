@@ -1,3 +1,7 @@
+/**
+* BootStrap file to start Angularjs App
+* Include all the modules needed for he App
+*/
 (function() {
   'use strict';
 
